@@ -1,0 +1,308 @@
+/* ================= PROFESSIONAL SECTIONS ================= */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#800000;
+    margin-bottom:10px;
+}
+
+.underline{
+    width:80px;
+    height:4px;
+    background:gold;
+    margin:auto;
+}
+
+/* HISTORY SECTION */
+
+.history-section{
+    padding:90px 60px;
+    background:#f9f6f1;
+}
+
+.history-content{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.history-text{
+    flex:1;
+}
+
+.history-text h3{
+    color:#800000;
+    margin-bottom:20px;
+}
+
+.history-text p{
+    margin-bottom:15px;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.history-image{
+    flex:1;
+}
+
+.history-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* CULTURE SECTION */
+
+/* .culture-section{
+    padding:90px 60px;
+    background:white;
+}
+
+.culture-grid{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.culture-card{
+    width:340px;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+} */
+ /* CULTURE GRID FIXED GRID LAYOUT */
+ /* ROYAL LEADERSHIP SECTION HEADING */
+.leaders h2{
+    color:#800000;
+    font-size:32px;
+    margin:60px 0 30px;  /* top:60px, bottom:30px */
+    text-align:center;
+}
+
+.culture-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns on desktop */
+    gap:25px;
+    justify-items:center;
+    align-items:start;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* Culture Card */
+.culture-card{
+    width:100%;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.culture-card:hover{
+    transform:translateY(-5px);
+}
+
+/* Image Styling */
+.culture-card img{
+    width:100%;
+    aspect-ratio: 4 / 3;  /* keeps image proportional */
+    object-fit:cover;
+    display:block;
+    transition:0.4s ease;
+}
+
+
+.culture-card:hover{
+    transform:translateY(-8px);
+}
+
+.culture-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.culture-content{
+    padding:25px;
+}
+
+.culture-content h3{
+    color:#800000;
+    margin-bottom:10px;
+}
+
+.culture-content p{
+    line-height:1.7;
+}
+/* READ MORE STYLING */
+
+.read-more-btn{
+    background:#800000;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+    margin-top:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.read-more-btn:hover{
+    background:gold;
+    color:black;
+}
+
+.more-content{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height 0.5s ease;
+    margin-top:15px;
+    text-align:left;
+}
+
+.more-content p{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+/* Active state */
+.card.active .more-content{
+    max-height:500px;
+}
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 992px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    section{
+        padding:50px 30px;
+    }
+
+    .history-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .history-text{
+        text-align:center;
+    }
+
+    .card-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:90%;
+    }
+
+    .subchief-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .subchief-card{
+        width:90%;
+    }
+
+    .culture-grid{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .culture-card{
+        width:90%;
+    }
+
+    .carousel-text h2{
+        font-size:28px;
+    }
+
+    .carousel-text p{
+        font-size:14px;
+    }
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 576px){
+
+    header{
+        padding:15px;
+    }
+
+    header h1{
+        font-size:18px;
+    }
+
+    nav ul li{
+        margin:10px;
+    }
+
+    .carousel{
+        height:60vh;
+    }
+
+    .carousel-text h2{
+        font-size:22px;
+    }
+
+    .carousel-text p{
+        font-size:13px;
+    }
+
+    .gallery-container{
+        padding:30px;
+        grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+    }
+
+    .gallery-item img{
+        height:180px;
+    }
+
+}
+/* Tablet */
+@media (max-width: 992px){
+    .culture-grid{
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablet */
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px){
+    .culture-grid{
+        grid-template-columns: 1fr;  /* 1 column on mobile */
+        gap:15px;
+        padding:0 20px;
+    }
+
+    .culture-card img{
+        height:auto;
+    }
+}
+

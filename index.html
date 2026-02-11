@@ -1,0 +1,469 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amanokrom Gyaseman Palace</title>
+<link rel="stylesheet" href="style.css">
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVIGATION */
+header{
+    background:#800000;
+    color:white;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header h1{
+    font-size:22px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:gold;
+}
+
+/* ================= CAROUSEL ================= */
+
+.carousel{
+    position:relative;
+    width:100%;
+    height:80vh;
+    overflow:hidden;
+}
+
+.slides{
+    display:flex;
+    width:300%;
+    height:100%;
+    transition:0.8s ease-in-out;
+}
+
+.slide{
+    width:100%;
+    flex-shrink:0;
+    height:100%;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
+/* Gradient Overlay */
+.slide::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(to right, rgba(0,0,0,0.8), rgba(128,0,0,0.6));
+}
+
+/* Images */
+.slide1{
+    background-image:url("https://ghanaculture.gov.gh/wp-content/uploads/2025/03/odwira-festival.jpg");
+}
+.slide2{
+    background-image:url("https://images.unsplash.com/photo-1578926288207-a90a5366759d");
+}
+.slide3{
+    background-image:url("https://images.unsplash.com/photo-1590099543488-0215f8d16d52");
+}
+
+/* Carousel Text */
+.carousel-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+    z-index:2;
+}
+
+.carousel-text h2{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.carousel-text p{
+    font-size:18px;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:60px 80px;
+    text-align:center;
+}
+
+/* Leaders Section */
+.leaders{
+    background:#f4f4f4;
+}
+
+.card-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    width:300px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    border-radius:10px;
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+    color:#800000;
+}
+
+.card button{
+    background:#800000;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+    margin-top:10px;
+}
+
+.card button:hover{
+    background:gold;
+    color:black;
+}
+
+/* ================= SUBCHIEFS ================= */
+
+.subchiefs{
+    background:white;
+}
+
+.subchief-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:30px;
+}
+
+.subchief-card{
+    width:280px;
+    background:#fff8f0;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    overflow:hidden;
+    text-align:left;
+}
+
+.subchief-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.subchief-card .info{
+    padding:15px;
+}
+
+.subchief-card h3{
+    color:#800000;
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#800000;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Amanokrom Gyaseman Palace</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#culture">Culture</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= CAROUSEL ================= -->
+<div class="carousel">
+    <div class="slides" id="slides">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+    </div>
+
+    <div class="carousel-text">
+        <h2>Welcome to Amanokrom Gyaseman</h2>
+        <p>Celebrating Heritage, Tradition & Royal Leadership</p>
+    </div>
+</div>
+
+<!-- HISTORY -->
+ <!-- ================= HISTORY SECTION ================= -->
+<section id="history" class="history-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>History of Amanokrom Gyaseman</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="history-content">
+            <div class="history-text">
+                <h3>Our Royal Heritage</h3>
+                <p>
+                    Amanokrom Gyaseman traces its origins to noble ancestors
+                    whose leadership established unity, governance,
+                    and cultural strength.
+                </p>
+
+                <p>
+                    The palace remains the traditional seat of authority,
+                    preserving sacred customs and guiding community development.
+                </p>
+
+                <p>
+                    Through generations, chiefs and elders have ensured peace,
+                    justice, and prosperity among the people.
+                </p>
+            </div>
+
+            <div class="history-image">
+                <img src="asset/img/fes.jpeg" alt="Traditional Palace">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= CULTURE SECTION ================= -->
+<section id="culture" class="culture-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Culture & Traditions</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="culture-grid">
+
+            <div class="culture-card">
+                <img src="asset/img/fes.jpeg" alt="Festival">
+                <div class="culture-content">
+                    <h3>Festivals</h3>
+                    <p>
+                        Annual festivals celebrate ancestry, unity, and gratitude.
+                        Chiefs, elders, and youth gather in colorful traditional display.
+                    </p>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <img src="asset/img/fes.jpeg" alt="Kente Cloth">
+                <div class="culture-content">
+                    <h3>Traditional Attire</h3>
+                    <p>
+                        Rich kente cloth and symbolic ornaments represent
+                        royalty, dignity, and cultural identity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="culture-card">
+                <img src="asset/img/fes.jpeg" alt="Drumming">
+                <div class="culture-content">
+                    <h3>Drumming & Dance</h3>
+                    <p>
+                        Traditional drumming and dance express history,
+                        spirituality, and communal harmony.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- LEADERS -->
+ <!-- ================= ROYAL LEADERSHIP ================= -->
+<section class="leaders">
+    <h2>Royal Leadership</h2>
+    <div class="card-container">
+
+        <!-- Chief -->
+        <div class="card">
+            <img src="asset/img/NANA OSIM.jpeg" alt="Chief">
+            <h3>The Chief</h3>
+            <p>Custodian of the land and supreme traditional authority.</p>
+
+            <button class="read-more-btn">Read More</button>
+
+            <div class="more-content">
+                <p>
+                    The Chief of Amanokrom Gyaseman serves as the spiritual,
+                    cultural, and administrative head of the community.
+                    He presides over traditional councils, resolves disputes,
+                    safeguards ancestral lands, and ensures the preservation
+                    of customs and values.
+                </p>
+
+                <p>
+                    His leadership promotes unity, peace, and development,
+                    working closely with elders and subchiefs to advance
+                    the welfare of the people.
+                </p>
+            </div>
+        </div>
+
+        <!-- Queenmother -->
+        <div class="card">
+            <img src="asset/img/NANA OSIM.jpeg" alt="Queenmother">
+            <h3>The Queenmother</h3>
+            <p>Advisor and mother of the community.</p>
+
+            <button class="read-more-btn">Read More</button>
+
+            <div class="more-content">
+                <p>
+                    The Queenmother plays a vital advisory role within
+                    the traditional council. She oversees matters concerning
+                    women, children, and family welfare.
+                </p>
+
+                <p>
+                    She also participates in selecting and advising the Chief,
+                    ensuring leadership upholds moral standards, tradition,
+                    and community harmony.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= SUBCHIEFS ================= -->
+<section class="subchiefs">
+    <h2>Subchiefs & Their Roles</h2>
+
+    <div class="subchief-container">
+
+        <div class="subchief-card">
+            <img src="asset/img/fes.jpeg" alt="Linguist">
+            <div class="info">
+                <h3>Okyeame (Linguist)</h3>
+                <p>Spokesperson of the Chief who communicates messages and preserves proverbs.</p>
+            </div>
+        </div>
+
+        <div class="subchief-card">
+            <img src="asset/img/fes.jpeg" alt="Gyaasehene">
+            <div class="info">
+                <h3>Gyaasehene</h3>
+                <p>Oversees palace administration and daily traditional affairs.</p>
+            </div>
+        </div>
+
+        <div class="subchief-card">
+            <img src="asset/img/NANA OSIM.jpeg" alt="Krontihene">
+            <div class="info">
+                <h3>Krontihene</h3>
+                <p>Leads the youth and assists in maintaining order and security.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Amanokrom Gyaseman Palace | All Rights Reserved
+</footer>
+
+
+ <script>
+
+/* CAROUSEL */
+let index = 0;
+const slides = document.getElementById("slides");
+
+function slideShow(){
+    index++;
+    if(index > 2){
+        index = 0;
+    }
+    slides.style.transform = "translateX(" + (-index * 100) + "%)";
+}
+
+setInterval(slideShow, 4000);
+
+
+/* READ MORE FUNCTION */
+const buttons = document.querySelectorAll(".read-more-btn");
+
+buttons.forEach(button => {
+    button.addEventListener("click", function(){
+        const card = this.parentElement;
+        card.classList.toggle("active");
+
+        if(card.classList.contains("active")){
+            this.textContent = "Read Less";
+        } else {
+            this.textContent = "Read More";
+        }
+    });
+});
+
+</script>
+
+
+
+
+</body>
+</html>
